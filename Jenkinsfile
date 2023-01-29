@@ -13,7 +13,7 @@ pipeline {
     }
     stage('mavenbuild'){
       steps {
-        bat "mvn package -Dmaven.test.skip"
+        sh "mvn package -Dmaven.test.skip"
       }
     }
   }
