@@ -16,5 +16,9 @@ pipeline {
         sh "mvn package -Dmaven.test.skip"
       }
     }
+    stage('create zip'){
+      zip -r target.zip target
+    }
+  }
   }
 }
