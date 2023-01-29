@@ -18,7 +18,7 @@ pipeline {
     }
     stage('create zip'){
       steps {
-        zip -r target.zip target
+        sh "zip -r target.zip target"
       }
     }
   }
